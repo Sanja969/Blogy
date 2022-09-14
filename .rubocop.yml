@@ -5,6 +5,10 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "app/**/*"
+    - "bin/**/*"
+    - "config/**/*"
+
 
   DisplayCopNames: true
 
