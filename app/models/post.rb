@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  after_create :counter
+
   def counter
     user.PostCounter.nil? ? user.PostCounter = 1 : user.PostCounter += 1
     user.update(PostCounter: user.PostCounter)
