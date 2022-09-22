@@ -5,7 +5,6 @@ class Like < ApplicationRecord
   after_save :counter
 
   def counter
-    post.LikesCounter.nil? ? post.LikesCounter = 1 : post.LikesCounter += 1
-    post.update(LikesCounter: post.LikesCounter)
+    post.update(LikesCounter: post.LikesCounter + 1)
   end
 end
