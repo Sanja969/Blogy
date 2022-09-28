@@ -1,0 +1,47 @@
+.comments-likes-number {
+  font-weight: 700;
+  margin-left: 85%;
+}
+
+.all-posts {
+  display: none;
+}
+
+.last-posts {
+  display: block;
+}
+
+.post {
+  margin-bottom: 5px;
+}
+
+.short-posts {
+  margin-bottom: 60px;
+}
+
+.posts-btn {
+  margin-left: 50%;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+}
+
+.comments {
+  border: 1px solid black;
+  margin: 0 40px;
+  padding: 10px;
+  margin: 0 40px 20px 40px;
+}
+
+.post-detail,
+.all-comments {
+  border: 1px solid black;
+  margin: 10px 40px;
+  padding: 5px 10px;
+}
+
+.post-detail-head {
+  display: flex;
+  justify-content: space-between;
+}
