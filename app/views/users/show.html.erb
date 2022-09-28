@@ -1,1 +1,16 @@
 <h1>Here is the user</h1>
+<%= render @user %>
+
+<div class = "bio">
+  <h3>Bio</h3>
+  <%= @user.Bio %> 
+</div>
+
+
+<div class="short-posts">
+  <% @user.recent_3_posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
+
+<%= link_to "See all posts", user_posts_path(@user.id), class:'posts-btn'%>
