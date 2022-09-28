@@ -1,1 +1,33 @@
+<%= render @user %>
+
+<div class = "bio">
+  <h3>Bio</h3>
+  <%= @user.Bio %> 
+</div>
+
 <h1>A list of posts for a given user</h1>
+
+<div class="last-posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <div class="comments">
+      <% post.recent_5_comments.each do |comment| %>
+        <p><strong><%= User.find(comment.Author_id).Name %>:</strong>  <%= comment.Text %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <button class="all-posts-btn posts-btn">Show more</button>
+</div>
+
+<div class="all-posts">
+  <% @user.posts.each do |post| %>
+    <%= render post %>
+    <div class="comments">
+      <% post.recent_5_comments.each do |comment| %>
+        <p><strong><%= User.find(comment.Author_id).Name %>:</strong>  <%= comment.Text %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <button class="last-posts-btn posts-btn">Show less</button>
+</div>
+
