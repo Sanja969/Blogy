@@ -23,6 +23,6 @@ RSpec.describe 'User', type: :model do
     Post.create(user: subject, Title: 'post3', Text: 'Post 3')
     Post.create(user: subject, Title: 'post4', Text: 'Post 4')
     expect(subject.recent_3_posts.length).to eql 3
-    expect(subject.recent_3_posts.pop.Title).to eql 'post1'
+    expect(subject.recent_3_posts.pop.Title).to eql 'post4'
   end
 end
