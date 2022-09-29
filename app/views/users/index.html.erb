@@ -1,1 +1,6 @@
 <h1>List of users</h1>
+<% @users.reverse_each do |user| %>
+  <%= link_to user do %>
+    <%= render user %> 
+  <% end %>
+<% end %>

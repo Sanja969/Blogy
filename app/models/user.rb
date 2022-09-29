@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def recent_3_posts
-    posts.last(3)
+    sorted = posts.order('created_at DESC')
+    sorted.last(3)
   end
 end

@@ -1,1 +1,19 @@
 <h1>Here is the post for the user.</h1>
+<div class="post-detail">
+  <div class="post-detail-head">
+    <h3><%= @post.Title %> by <%= @user.Name %></h3>
+    <p class="">
+      Comments:
+      <%= @post.CommentsCounter || 0 %>,
+      Likes:
+      <%= @post.LikesCounter || 0 %>
+    </p>
+  </div>
+  <p><%= @post.Text %></p>
+</div>
+
+<div class="all-comments">
+  <% @comments.each do |comment| %>
+    <p><strong><%= User.find(comment.Author_id).Name %>:</strong>  <%= comment.Text %></p>
+  <% end %>
+</div>
