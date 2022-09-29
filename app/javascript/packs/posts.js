@@ -18,8 +18,12 @@ if (document.querySelector(".all-posts")) {
   })
   
 }
-const commentInput = document.querySelector(".comment-input")
 
-commentInput.addEventListener("click", () => {
-  commentInput.setAttribute('rows', 6)
-})
+if (document.querySelector(".comment-input")) {
+  const commentInput = document.querySelector(".comment-input")
+
+  commentInput.addEventListener("click", () => {
+    commentInput.setAttribute('rows', 6)
+  })
+}
+
