@@ -1,0 +1,27 @@
+<%= form_with(model: post, class: "post-form") do |form| %>
+    <% if post.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Title, style: "display: block" %>
+    <%= form.text_area :Title, placeholder: "Enter post title here", required: true, size: "70" %>
+  </div>
+
+  <div>
+    <%= form.label :Text, style: "display: block" %>
+    <%= form.text_area :Text, placeholder: "Enter post text here", rows: 20, required: true, cols: "70", rows: "6" %>
+  </div>
+
+  <div>
+    <%= form.submit 'Publish' %>
+  </div>
+<% end %>

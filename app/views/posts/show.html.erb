@@ -12,6 +12,14 @@
   <p><%= @post.Text %></p>
 </div>
 
+<div class="post-response">
+  <%= render partial: "new_like", post: @post %>
+</div>
+
+<div class="new-comment">
+  <%= render partial: "new_comment", post: @post %>
+</div>
+
 <div class="all-comments">
   <% @comments.each do |comment| %>
     <p><strong><%= User.find(comment.Author_id).Name %>:</strong>  <%= comment.Text %></p>

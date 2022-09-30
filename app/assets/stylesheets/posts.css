@@ -45,3 +45,22 @@
   display: flex;
   justify-content: space-between;
 }
+
+.new-comment {
+  text-align: center;
+}
+
+.post-response {
+  padding: 0 40px;
+  display: flex;
+  justify-content: end;
+}
+
+.like {
+  width: 100px;
+  height: 30px;
+}
+
+.post-form {
+  text-align: center;
+}
