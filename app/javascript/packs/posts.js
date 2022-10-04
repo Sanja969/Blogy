@@ -3,18 +3,18 @@ const postsLastBtn = document.querySelector(".last-posts-btn")
 
 if (document.querySelector(".all-posts")) {
   window.addEventListener = ("load", () => {
-    document.querySelector(".all-posts").style.display = "none"
-    document.querySelector(".last-posts").style.display = "block"
-  })
-  
-  postsAllBtn.addEventListener("click", () => {
     document.querySelector(".all-posts").style.display = "block"
     document.querySelector(".last-posts").style.display = "none"
   })
   
-  postsLastBtn.addEventListener("click", () => {
+  postsAllBtn.addEventListener("click", () => {
     document.querySelector(".all-posts").style.display = "none"
     document.querySelector(".last-posts").style.display = "block"
+  })
+  
+  postsLastBtn.addEventListener("click", () => {
+    document.querySelector(".all-posts").style.display = "block"
+    document.querySelector(".last-posts").style.display = "none"
   })
   
 }
@@ -26,4 +26,5 @@ if (document.querySelector(".comment-input")) {
     commentInput.setAttribute('rows', 6)
   })
 }
+
 
