@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'capybara/rspec'
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
