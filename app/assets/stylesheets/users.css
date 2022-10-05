@@ -50,3 +50,21 @@ h3 {
   padding-bottom: 20px;
 }
 
+.login,
+.sign-up {
+  text-align: center;
+}
+
+.email-log,
+.pass-log,
+.login-btn,
+.sign-up-fil,
+.sign-up-btn {
+  height: 30px;
+  width: 50%;
+  margin: 10px;
+}
+
+.shared-devise {
+  color: blue;
+}
