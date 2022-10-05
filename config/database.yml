@@ -6,7 +6,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: blogy
+  database: blogy1
   host: localhost
   pool: 5
   username: postgres
@@ -22,7 +22,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: blogy_Production
+  database: blogy1_Production
   host: localhost
   pool: 5
   username: postgres

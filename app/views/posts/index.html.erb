@@ -20,7 +20,7 @@
 </div>
 
 <div class="all-posts">
-  <% @posts.each do |post| %>
+  <% @user.posts.each do |post| %>
     <%= render post %>
     <div class="comments">
       <% post.recent_5_comments.each do |comment| %>
@@ -30,3 +30,5 @@
   <% end %>
   <button class="last-posts-btn posts-btn">Show less</button>
 </div>
+
+<%= javascript_import_module_tag "packs/posts" %>
