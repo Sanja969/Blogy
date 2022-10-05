@@ -4,11 +4,11 @@
 }
 
 .all-posts {
-  display: none;
+  display: block;
 }
 
 .last-posts {
-  display: block;
+  display: none;
 }
 
 .post {
