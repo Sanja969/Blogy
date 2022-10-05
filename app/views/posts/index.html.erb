@@ -8,7 +8,7 @@
 <h1>A list of posts for a given user</h1>
 
 <div class="last-posts">
-  <% @posts.each do |post| %>
+  <% @user.recent_3_posts do |post| %>
     <%= render post %>
     <div class="comments">
       <% post.recent_5_comments.each do |comment| %>
@@ -30,3 +30,5 @@
   <% end %>
   <button class="last-posts-btn posts-btn">Show less</button>
 </div>
+
+<%= javascript_import_module_tag "packs/posts" %>
