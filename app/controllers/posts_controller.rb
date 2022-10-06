@@ -29,9 +29,7 @@ class PostsController < ApplicationController
 
   def destroy
     @status_update = Post.find(params[:id])
-    if @status_update.present?
-      @status_update.destroy
-    end
+    @status_update.destroy if @status_update.present?
     redirect_to root_url
   end
 
