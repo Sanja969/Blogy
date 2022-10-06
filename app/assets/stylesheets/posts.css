@@ -64,3 +64,13 @@
 .post-form {
   text-align: center;
 }
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-box > p {
+  margin: 0;
+}

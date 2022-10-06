@@ -7,10 +7,15 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy, foreign_key: 'Post_id'
   has_many :likes, dependent: :destroy, foreign_key: 'Post_id'
 
-  after_create :counter
+  after_create :counter_inc
+  after_destroy :counter_dec
 
-  def counter
+  def counter_inc
     user.update(PostCounter: user.PostCounter + 1)
+  end
+
+  def counter_dec
+    user.update(PostCounter: user.PostCounter - 1)
   end
 
   def recent_5_comments
