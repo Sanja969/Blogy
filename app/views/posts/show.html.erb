@@ -22,6 +22,14 @@
 
 <div class="all-comments">
   <% @comments.each do |comment| %>
-    <p><strong><%= User.find(comment.Author_id).Name %>:</strong>  <%= comment.Text %></p>
+    <div class='comment-box'>
+      <p>
+        <strong><%= User.find(comment.Author_id).Name %>:</strong> 
+        <%= comment.Text %>
+      </p>
+      <% if can? :destroy, comment %>
+        <%= button_to "Destroy this comment", post_comment_path(@post.id, comment.id), method: :delete %>
+      <% end %>
+    </div>
   <% end %>
 </div>
