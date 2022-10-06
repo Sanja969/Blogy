@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
   end
@@ -24,6 +25,14 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def destroy
+    @status_update = Post.find(params[:id])
+    if @status_update.present?
+      @status_update.destroy
+    end
+    redirect_to root_url
   end
 
   def post_params
