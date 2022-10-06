@@ -10,5 +10,8 @@
         Likes:
         <%= post.LikesCounter || 0 %>
       </p>
+      <% if can? :destroy, post %>
+        <%= button_to "Destroy this post", user_post_path(@user.id, post.id), method: :delete %>
+      <% end %>
     </div>
   <% end %>
