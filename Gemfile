@@ -18,6 +18,9 @@ gem 'puma', '~> 5.0'
 
 gem 'rails', '~> 7.0.4'
 
+gem 'rswag-api'
+gem 'rswag-ui'
+
 gem 'sqlite3'
 
 gem 'sprockets-rails'
@@ -32,6 +35,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'webdrivers'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -40,3 +44,5 @@ group :development do
 end
 
 gem 'rack-cors'
+
+gem 'rswag'
