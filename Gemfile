@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'active_model_serializers', '~> 0.10.13'
+
 gem 'bootsnap', require: false
 
 gem 'cancancan'
@@ -36,3 +38,5 @@ group :development do
   gem 'letter_opener'
   gem 'web-console'
 end
+
+gem 'rack-cors'
